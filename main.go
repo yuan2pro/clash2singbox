@@ -30,7 +30,7 @@ var (
 var configByte []byte
 
 func init() {
-    flag.StringVar(&url, "url", "https://mirror.ghproxy.com/https://raw.githubusercontent.com/yuan2pro/sub_merge/main/sub/1.yaml", "订阅地址，多个链接使用 | 分割")
+    flag.StringVar(&url, "url", "", "订阅地址，多个链接使用 | 分割")
     flag.StringVar(&path, "i", "", "本地 clash 文件")
     flag.StringVar(&outPath, "o", "config.json", "输出文件")
     flag.StringVar(&include, "include", "", "urltest 选择的节点")
