@@ -4,9 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"regexp"
 	"reflect"
+	"regexp"
 	"strings"
+
 	"github.com/samber/lo"
 	"github.com/xmdhs/clash2singbox/model/clash"
 	"github.com/xmdhs/clash2singbox/model/singbox"
@@ -157,6 +158,7 @@ func PatchMap(
 		s = append(s, singbox.SingBoxOut{
 			Type:      "urltest",
 			Tag:       "urltest",
+			Interval:  "15s",
 			Outbounds: ftags,
 		})
 	}
