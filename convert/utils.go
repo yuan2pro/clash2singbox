@@ -80,7 +80,7 @@ func Patch(b []byte, s []singbox.SingBoxOut, include, exclude string, extOut []i
 	}
 	extTag = append(extTag, extags...)
 	outs = append(outs, extOut...)
-	d, err := PatchMap(b, s, include, exclude, outs, extTag, true)
+	d, err := PatchMap(b, s, include, exclude, outs, extTag, false)
 	if err != nil {
 		return nil, fmt.Errorf("Patch: %w", err)
 	}
