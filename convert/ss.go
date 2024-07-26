@@ -13,6 +13,9 @@ import (
 
 func ss(p *clash.Proxies, s *singbox.SingBoxOut) ([]singbox.SingBoxOut, error) {
 	s.Method = p.Cipher
+	if s.Method == "ss" {
+		return nil, fmt.Errorf("method: ss")
+	}
 	if !p.Udp {
 		s.Network = "tcp"
 	}
